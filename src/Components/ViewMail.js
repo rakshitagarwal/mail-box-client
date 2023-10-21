@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
-import Header from "./Header";
-import { Button, Container, Divider, Paper } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+// import Header from "./Header"
+import { Button, Container, Divider,  } from "@mui/material";
+import {  useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { inboxActions } from "../store/inbox-slice";
+// import { inboxActions } from "../store/inbox-slice";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -13,8 +13,10 @@ import Avatar from "@mui/material/Avatar";
 
 const ViewMail = () => {
   const { id } = useParams();
+  console.log(id);
   const navigate = useNavigate();
   const inboxMails = useSelector((state) => state.inbox.emails);
+  console.log(inboxMails);
   let mail = JSON.parse(localStorage.getItem("openEmail"));
   const isSentBox = mail.senderEmail === localStorage.getItem("userEmail");
 

@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Container } from "@mui/material";
+import { Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import "./SideBar.css";
 import InboxIcon from "@mui/icons-material/Inbox";
 import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
 import { uiActions } from "../store/ui-slice";
-import { useDispatch, useSelector } from "react-redux";
-import Badge from "@mui/material/Badge";
+import { useDispatch,  } from "react-redux";
+// import Badge from "@mui/material/Badge";
 
 const SideBar = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const SideBar = () => {
   };
 
   const unseen = localStorage.getItem("unseenCount") > 0;
-
+  console.log(unseen);
   return (
     <div className="sideBar">
       <Button

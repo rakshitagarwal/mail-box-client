@@ -12,7 +12,7 @@ import "./ComposeMail.css";
 import { EditorState } from "draft-js";
 import { convertToHTML } from "draft-convert";
 import { uiActions } from "../store/ui-slice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
 const ComposeMail = () => {

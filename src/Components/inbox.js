@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { inboxActions } from "../store/inbox-slice";
-import Paper from "@mui/material/Paper";
+// import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -48,6 +48,7 @@ export default function Inbox() {
   );
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
+  console.log(auth);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const handleChangePage = (event, newPage) => {

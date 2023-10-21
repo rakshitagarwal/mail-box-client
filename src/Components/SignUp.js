@@ -11,14 +11,14 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import { Paper } from "@mui/material";
-import { useState } from "react";
+// import { Paper } from "@mui/material";
+// import { useState } from "react";
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
   const navigate = useNavigate();
-
+  console.log(navigate);
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -50,6 +50,7 @@ export default function SignUp() {
       );
       if (res.ok) {
         const data = await res.json();
+        console.log(data);
         console.log("Signed up Successfully");
         event.target.reset();
       }
