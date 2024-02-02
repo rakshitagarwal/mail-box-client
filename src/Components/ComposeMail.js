@@ -49,7 +49,7 @@ const ComposeMail = () => {
     const senderEmailEdited = senderEmail.replace("@", "").replace(".", "");
 
     fetch(
-      `https://mail-box-98747-default-rtdb.firebaseio.com/${receiverEmailEdited}/inbox.json`,
+      `https://mail-box-e0063-default-rtdb.firebaseio.com/${receiverEmailEdited}/inbox.json`,
       {
         method: "POST",
         body: JSON.stringify(mailData),
@@ -67,7 +67,7 @@ const ComposeMail = () => {
       });
 
     fetch(
-      `https://mail-box-98747-default-rtdb.firebaseio.com/${senderEmailEdited}/sentBox.json`,
+      `https://mail-box-e0063-default-rtdb.firebaseio.com/${senderEmailEdited}/sentBox.json`,
       {
         method: "POST",
         body: JSON.stringify(mailData),

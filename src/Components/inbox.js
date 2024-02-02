@@ -44,7 +44,7 @@ export default function Inbox() {
   const email = localStorage.getItem("userEmail");
   const editedEmail = email.replace("@", "").replace(".", "");
   const [newdata] = useFetchdata(
-    `https://mail-box-98747-default-rtdb.firebaseio.com/${editedEmail}/inbox.json`
+    `https://mail-box-e0063-default-rtdb.firebaseio.com/${editedEmail}/inbox.json`
   );
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -84,7 +84,7 @@ export default function Inbox() {
 
     console.log("base", Object.keys(inboxEmails));
     fetch(
-      `https://mail-box-98747-default-rtdb.firebaseio.com/${editedEmail}/inbox/${data}.json`,
+      `https://mail-box-e0063-default-rtdb.firebaseio.com/${editedEmail}/inbox/${data}.json`,
       {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -111,7 +111,7 @@ export default function Inbox() {
         seen: "seen",
       };
       fetch(
-        `https://mail-box-98747-default-rtdb.firebaseio.com/${editedEmail}/inbox/${data}.json`,
+        `https://mail-box-e0063-default-rtdb.firebaseio.com/${editedEmail}/inbox/${data}.json`,
 
         {
           method: "PUT",

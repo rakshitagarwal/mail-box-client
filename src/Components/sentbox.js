@@ -43,7 +43,7 @@ export default function SentBox() {
 
   //fetching data from firebse
   const [newdata] = useFetchdata(
-    `https://mail-box-98747-default-rtdb.firebaseio.com/${editedEmail}/sentBox.json`
+    `https://mail-box-e0063-default-rtdb.firebaseio.com/${editedEmail}/sentBox.json`
   );
 
   //mui pagination settings
@@ -71,7 +71,7 @@ export default function SentBox() {
 
   const handleDelete = (data) => {
     fetch(
-      `https://mail-box-98747-default-rtdb.firebaseio.com/${editedEmail}/sentBox/${data}.json`,
+      `https://mail-box-e0063-default-rtdb.firebaseio.com/${editedEmail}/sentBox/${data}.json`,
       {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },

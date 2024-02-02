@@ -35,7 +35,7 @@ export default function SignUp() {
     }
     try {
       const res = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBHFJp-SecPbGh_fhZFtAzieFC4s8XcX4E",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC7UEJKmgF3BA2RmL7xPhWH3yKCJtbnNu0",
         {
           method: "POST",
           body: JSON.stringify({
